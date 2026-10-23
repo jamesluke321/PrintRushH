@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PrintRush | Fast & Affordable Student Printing</title>
+  <link rel="stylesheet" href="C:\Users\Jerald\OneDrive\Desktop\PrintRush Website\PrintRush.css">
+
+  <!-- PyScript (runs Python in the browser) -->
+  <link rel="stylesheet" href="C:\Users\Jerald\OneDrive\Desktop\PrintRush Website\PrintRush.css">
+  <script type="module" src="C:\Users\Jerald\OneDrive\Desktop\PrintRush Website\Pyscript.py"></script>
+</head>
+<body>
+
+  <!-- Promotional ad banner (stays at the top of the viewport) -->
+    <div class="promo-banner" id="promo">
+  <video class="banner-video" autoplay muted loop playsinline poster="bg.jpg">
+    <source src="C:\Users\Jerald\OneDrive\Desktop\PrintRush Website\AQN0ZSUTHMSw9VSRfoCJpObFeN8UYJlJf9LaGTzzx4-P7erYI0GDiiXtEB3AJeWHwl1N0zX1irw_UkznoDZoi7z0RbZF874NWMcF72Lh0g.mp4" type="video/mp4">
+  </video>
+    <h2>🔥 PrintRush Promo: Fast &amp; Affordable Student Printing!</h2>
+    <p>Get your modules and assignments printed for as low as ₱2.00/page. Order online and pick up instantly!</p>
+    <p class="promo-rotator" id="promoRotator" aria-live="polite">Need to print modules fast? PrintRush offers affordable B&amp;W printing for only ₱2.00 per page!</p>
+  </div>
+
+  <nav class="navbar">
+    <span class="logo">Print<span>Rush</span></span>
+    <ul>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#calculator">Calculator</a></li>
+      <li><a href="#order">Order</a></li>
+      <li><a href="#feasibility">Feasibility</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="home">
+      <div class="container">
+        <h1>Print fast. Pay less. Right by your school.</h1>
+        <p>PrintRush is a student-focused printing and document service located conveniently near school. Send your files online, and pick them up ready to go.</p>
+        <a href="#order" class="btn btn-primary">Send My Files</a>
+        <a href="#calculator" class="btn btn-secondary">Estimate My Cost</a>
+      </div>
+    </section>
+
+    <!-- Services & prices -->
+    <section class="section" id="services">
+      <div class="container">
+        <h2>Services &amp; Planning Prices</h2>
+        <div class="grid grid-4">
+          <article class="card">
+            <h3>Black &amp; White Printing</h3>
+            <p class="price">₱2.00<small>/page</small></p>
+            <p>Our main service. Perfect for modules, activities, and research papers.</p>
+          </article>
+          <article class="card">
+            <h3>Color Printing</h3>
+            <p class="price">₱5.00<small>/page</small></p>
+            <p>For projects, visuals, and presentations.</p>
+          </article>
+          <article class="card">
+            <h3>Photocopy</h3>
+            <p class="price">₱2.00<small>/page</small></p>
+            <p>Quick copies of forms and documents.</p>
+          </article>
+          <article class="card">
+            <h3>Lamination</h3>
+            <p class="price">₱20.00<small>/page</small></p>
+            <p>Protect IDs, certificates, and important papers.</p>
+          </article>
+        </div>
+        <p class="note">Planning prices from the PrintRush feasibility study. The ₱2.00 B&amp;W price is the most common survey choice; the other prices are planning estimates.</p>
+      </div>
+    </section>
+
+    <!-- Pricing calculator -->
+    <section class="section alt" id="calculator">
+      <div class="container narrow">
+        <h2>Pricing Calculator</h2>
+        <div class="card form-card">
+          <label for="paperSize">Paper size</label>
+          <select id="paperSize">
+            <option value="short" selected>Short bond paper (preferred by 66.7% of students)</option>
+            <option value="a4">A4 bond paper</option>
+            <option value="long">Long bond paper</option>
+          </select>
+
+          <label for="serviceType">Service type</label>
+          <select id="serviceType">
+            <option value="2" selected>Black &amp; White – ₱2.00/page</option>
+            <option value="5">Color – ₱5.00/page</option>
+            <option value="2.00" data-service="photocopy">Photocopy – ₱2.00/page</option>
+            <option value="20">Lamination – ₱20.00/page</option>
+          </select>
+
+          <label for="pageCount">Number of pages</label>
+          <input type="number" id="pageCount" min="0" step="1" value="10">
+
+          <div class="result" aria-live="polite">
+            <span>Estimated total</span>
+            <strong id="totalPrice">₱20.00</strong>
+          </div>
+          <p class="note" id="calcNote">10 pages × ₱2.00</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Online submission form -->
+    <section class="section" id="order">
+      <div class="container narrow">
+        <h2>Online Document Submission</h2>
+        <form id="orderForm" class="card form-card" novalidate>
+          <label for="custName">Your name</label>
+          <input type="text" id="custName" placeholder="Juan Dela Cruz" required>
+
+          <label for="custContact">Contact number</label>
+          <input type="tel" id="custContact" placeholder="09XX XXX XXXX" required>
+
+          <label for="orderService">Service</label>
+          <select id="orderService">
+            <option value="2" selected>Black &amp; White – ₱2.00/page</option>
+            <option value="5">Color – ₱5.00/page</option>
+            <option value="2">Photocopy – ₱2.00/page</option>
+            <option value="20">Lamination – ₱20.00/page</option>
+          </select>
+
+          <label for="orderPaper">Paper size</label>
+          <select id="orderPaper">
+            <option value="Short" selected>Short</option>
+            <option value="A4">A4</option>
+            <option value="Long">Long</option>
+          </select>
+
+          <label for="orderPages">Total pages</label>
+          <input type="number" id="orderPages" min="1" step="1" value="1" required>
+
+          <label for="fileUpload">Upload your files (modules, research papers, assignments)</label>
+          <input type="file" id="fileUpload" multiple accept=".pdf,.doc,.docx,.ppt,.pptx,.jpg,.jpeg,.png" required>
+          <ul id="fileList" class="file-list"></ul>
+
+          <fieldset>
+            <legend>Payment method</legend>
+            <label class="radio"><input type="radio" name="payment" value="Cash" checked> Cash (pay when you claim your printed files)</label>
+          </fieldset>
+
+          <label for="notes">Notes (optional)</label>
+          <textarea id="notes" rows="3" placeholder="e.g., double-sided, print pages 1–10 only"></textarea>
+
+          <div class="result">
+            <span>Estimated total</span>
+            <strong id="orderTotal">₱2.00</strong>
+          </div>
+
+          <button type="submit" class="btn btn-primary full">Submit Order</button>
+          <p id="formError" class="error" role="alert" hidden></p>
+        </form>
+
+        <div id="confirmation" class="confirmation" hidden aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- Feasibility summary -->
+    <section class="section alt" id="feasibility">
+      <div class="container">
+        <h2>Feasibility Summary</h2>
+        <p class="lead">Findings from our survey of <strong>30 respondents</strong> (28 BSIT, 2 BSTM; collected September 22–27, 2026).</p>
+
+        <div class="grid grid-4 stats">
+          <div class="stat"><strong>63.3%</strong><span>print modules most often</span></div>
+          <div class="stat"><strong>60.0%</strong><span>need black &amp; white printing</span></div>
+          <div class="stat"><strong>63.3%</strong><span>said YES to online submission<br>(+33.3% MAYBE)</span></div>
+          <div class="stat"><strong>43.3%</strong><span>chose ₱2.00 as the B&amp;W page price</span></div>
+        </div>
+
+        <h3>Survey highlights</h3>
+        <div class="bars">
+          <div class="bar-row"><span>Modules are the top document type</span><div class="bar"><i style="width:63.3%"></i></div><b>63.3%</b></div>
+          <div class="bar-row"><span>Black &amp; white printing needed</span><div class="bar"><i style="width:60%"></i></div><b>60.0%</b></div>
+          <div class="bar-row"><span>Short bond paper preferred</span><div class="bar"><i style="width:66.7%"></i></div><b>66.7%</b></div>
+          <div class="bar-row"><span>Prefer cash payment</span><div class="bar"><i style="width:96.7%"></i></div><b>96.7%</b></div>
+          <div class="bar-row"><span>Use an off-campus print shop</span><div class="bar"><i style="width:46.7%"></i></div><b>46.7%</b></div>
+          <div class="bar-row"><span>Print at least once a week</span><div class="bar"><i style="width:46.7%"></i></div><b>46.7%</b></div>
+        </div>
+
+        <h3>Estimated monthly forecast (base case)</h3>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Service</th><th>Price</th><th>Units / month</th><th>Revenue</th></tr></thead>
+            <tbody>
+              <tr><td>B&amp;W printing</td><td>₱2</td><td>4,000 pages</td><td>₱8,000</td></tr>
+              <tr><td>Color printing</td><td>₱5</td><td>600 pages</td><td>₱3,000</td></tr>
+              <tr><td>Photocopy</td><td>₱2</td><td>300 pages</td><td>₱600</td></tr>
+              <tr><td>Lamination</td><td>₱20</td><td>50 pages</td><td>₱1,000</td></tr>
+              <tr class="total"><td colspan="3">Total revenue</td><td>₱12,600</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="grid grid-4 stats">
+          <div class="stat"><strong>₱10,110</strong><span>expected monthly expenses</span></div>
+          <div class="stat"><strong>₱2,490</strong><span>estimated monthly profit</span></div>
+          <div class="stat"><strong>₱37,000</strong><span>estimated startup capital</span></div>
+          <div class="stat"><strong>~14.9 mo.</strong><span>simple payback period</span></div>
+        </div>
+
+        <p class="note">All peso figures are planning estimates, not guarantees. In the conservative case (60% of base volume), the estimated monthly result is −₱586. The survey covers only 30 respondents and does not represent the entire student market.</p>
+
+        <div class="verdict">Final decision: <strong>FEASIBLE WITH CONDITIONS</strong></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 PrintRush – A Business Analytics Project, Cebu Eastern College.</p>
+    <p>Team: Pabroa, Cabatuan, Pacilan, Tancinco, Cabuenias, Yncierto</p>
+  </footer>
+
+  <script type="py" src="./script.py"></script>
+</body>
+</html>
